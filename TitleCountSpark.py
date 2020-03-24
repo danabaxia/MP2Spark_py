@@ -33,7 +33,7 @@ filtered_words = lines\
     .map(lambda line: line.translate(table))\
     .map(lambda line: line.split())\
     .flatMap(lambda word: word)\
-    .fliter(lambda word: word not in stopwords)
+    .filter(lambda word: word not in stopwords)
 
 word_counts = filtered_words\
     .map(lambda word: (word, 1))\
